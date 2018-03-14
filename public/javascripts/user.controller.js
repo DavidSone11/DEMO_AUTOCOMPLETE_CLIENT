@@ -1,10 +1,10 @@
 var app = angular.module('mainApp', [
     'angucomplete-alt',
-    'angular-custom-select'
+    //'angular-custom-select'
 ]);
 app.controller('usersController', ['$http','$scope', function($http,$scope) {
 
-    $scope.usersLists = [];
+    $scope.userLists = [];
     $scope.selectedValues = {}
 
     $scope.getUserLists = function () {
@@ -12,7 +12,7 @@ app.controller('usersController', ['$http','$scope', function($http,$scope) {
         var userApi = "json/users.json";
         $http.get(userApi)
             .then(function (response) {
-                $scope.usersLists = response.data;
+                $scope.userLists = response.data;
             },function (error){
                 console.log(error);
             });
@@ -26,4 +26,7 @@ app.controller('usersController', ['$http','$scope', function($http,$scope) {
       return $http.get('json/users.json?email='+ query);
 
     }
+
+   
+
 }]);
