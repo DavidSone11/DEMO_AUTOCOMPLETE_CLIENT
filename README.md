@@ -4,7 +4,8 @@ AngularJS Autocomplete Directive
 
 angular-custom-select
 =========================
-it's an AngularJS directive that builds easily styleable, functional dropdowns using divs, rather than the not-so-customizable select element. It supports ng-model and ng-options, as well as options to customize placeholder text, control disabled states, and specify the classes applied to dropdown elements. You can check out a demo here.
+it's an AngularJS directive that builds easily styleable, functional dropdowns using divs, rather than the not-so-customizable select element. It supports ng-model and ng-options, as well as options to customize placeholder text, control disabled states, and specify the classes applied to dropdown elements. You can 
+__You can <a href="https://s3.amazonaws.com/angular-custom-select/example.html" target="_blank">check out a demo here</a>.__
 
 start lite-server
 ================
