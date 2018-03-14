@@ -12,6 +12,7 @@
     <script src="javascripts/angular-resource.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
     <script src="bower_components/angucomplete-alt/angucomplete-alt.js"></script>
+    <script src="bower_components/angular-custom-select/dist/angular-custom-select.min.js"></script>
     <script src="javascripts/user.controller.js"></script>
 </head>
 
@@ -22,8 +23,9 @@
             overflow-y: auto;
             max-height: 450px;
         }
-        .highlight{
-            color:red;
+
+        .highlight {
+            color: red;
         }
     </style>
 
@@ -39,10 +41,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <angucomplete-alt id="ddlUser" placeholder="Search email" input-name="userEmail" pause="400" selected-object="selectedEmail"
-                    remote-url-data-field="" title-field="email,firstName" remote-api-handler="getComments"
-                    minlength="2" input-class="form-control form-control-small" match-class="highlight"></angucomplete-alt>
+                    remote-url-data-field="" title-field="email,firstName" remote-api-handler="getComments" minlength="2" input-class="form-control form-control-small"
+                    match-class="highlight"></angucomplete-alt>
 
             </div>
+
+            <custom-select ng-model="selectedValues.email" ng-options="usersLists as usersLists.email for usersLists in usersLists"
+                placeholder="Select one of these string values...">
+            </custom-select>
 
         </div>
     </div>

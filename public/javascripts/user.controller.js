@@ -1,11 +1,17 @@
-var app = angular.module('mainApp', ['angucomplete-alt']);
+var app = angular.module('mainApp', [
+    'angucomplete-alt',
+    'angular-custom-select'
+]);
 app.controller('usersController', ['$http','$scope', function($http,$scope) {
+
+    $scope.usersLists = [];
+    $scope.selectedValues = {}
+
     $scope.getUserLists = function () {
         var apI = "https://jsonplaceholder.typicode.com/comments"
         var userApi = "json/users.json";
         $http.get(userApi)
             .then(function (response) {
-                console.log(response);
                 $scope.usersLists = response.data;
             },function (error){
                 console.log(error);
@@ -13,7 +19,7 @@ app.controller('usersController', ['$http','$scope', function($http,$scope) {
 
     }
 
-    // $scope.getUserLists();
+   $scope.getUserLists();
 
     $scope.getComments = function (query, timeout) {
       // return $http.get('https://jsonplaceholder.typicode.com/comments?email='+ query);
