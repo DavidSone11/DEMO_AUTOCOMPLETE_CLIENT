@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp" ng-controller="usersController">
+
+<head>
+    <title>AUTOCOMPLETE:A DEMO PROJECT TO IMPLEMENT AUTO COMPLETE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/angucomplete-alt/angucomplete-alt.css" />
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="javascripts/angular-resource.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="bower_components/angucomplete-alt/angucomplete-alt.js"></script>
+    <script src="javascripts/user.controller.js"></script>
+</head>
+
+<body>
+
+    <style>
+        .angucomplete-dropdown {
+            overflow-y: auto;
+            max-height: 450px;
+        }
+        .highlight{
+            color:red;
+        }
+    </style>
+
+    <div class="page-header">
+        <h1>AUTOCOMPLETE</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- {{usersLists}} -->
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <angucomplete-alt id="ddlUser" placeholder="Search email" input-name="userEmail" pause="400" selected-object="selectedEmail"
+                    remote-url-data-field="" title-field="email,firstName" remote-api-handler="getComments"
+                    minlength="2" input-class="form-control form-control-small" match-class="highlight"></angucomplete-alt>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
