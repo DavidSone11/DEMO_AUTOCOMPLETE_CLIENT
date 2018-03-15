@@ -27,6 +27,8 @@ app.controller('usersController', ['$http','$scope', function($http,$scope) {
 
     }
 
+
+    console.log($scope.selectedEmail);
    
 
 }]);

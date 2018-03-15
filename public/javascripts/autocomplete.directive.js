@@ -5,7 +5,7 @@ directives.directive('autocomplete', ['$http', function($http) {
         element.autocomplete({
             minLength:3,
             source:function (request, response) {
-                var url = "http://localhost/words.php?keyword=" + request.term;
+                var url = "json/users.json?email=" + request.term;
                 $http.get(url).success( function(data) {
                     response(data.results);
                 });
