@@ -1,8 +1,9 @@
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/mydb";
-
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  console.log("Database created!");
-  db.close();
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1/locolink', function (err) {
+  if (err) {
+    console.log('Error in Connection', error);
+  } else {
+    console.log('Connection Successfully');
+  }
 });
+
